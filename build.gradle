@@ -1,0 +1,19 @@
+plugins {
+    id 'base'
+}
+
+task customBuild {
+    doLast {
+        println 'Building project...'
+    }
+}
+
+task cleanProject {
+    doLast {
+        println 'Cleaning project files...'
+    }
+}
+
+task run(type: Exec) {
+    commandLine 'node', 'server.js'
+}
