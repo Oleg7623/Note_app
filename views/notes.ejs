@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Мої нотатки</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Нотатки</h1>
+    <form method="POST" action="/add">
+      <input type="text" name="note" placeholder="Введіть нотатку" required>
+      <button type="submit">Додати</button>
+    </form>
+    <ul>
+      <% notes.forEach(function(note) { %>
+        <li><%= note %></li>
+      <% }); %>
+    </ul>
+  </div>
+</body>
+</html>
