@@ -1,28 +1,39 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  color: #333; /* Змінили колір тексту для кращого контрасту */
 }
 
 .container {
   background: white;
-  padding: 20px 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 450px; /* Трохи збільшили ширину */
+  transition: box-shadow 0.3s ease-in-out; /* Плавний перехід для тіні */
+}
+
+.container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Додаємо ефект при наведенні */
 }
 
 input, button {
   width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+input {
+  background-color: #fafafa; /* Зробили фон для input світлішим */
 }
 
 button {
@@ -30,9 +41,37 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Додаємо плавні анімації */
+}
+
+button:hover {
+  background-color: #2980b9; /* Трохи темніший відтінок синього при наведенні */
+  transform: translateY(-2px); /* Легкий ефект підняття кнопки */
+}
+
+button:active {
+  transform: translateY(0); /* Відновлюємо кнопку після натискання */
 }
 
 ul {
-  margin-top: 20px;
+  margin-top: 25px;
   padding-left: 20px;
+  list-style-type: square; /* Додаємо квадратні маркери до списку */
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 16px; /* Збільшуємо розмір шрифту в списках */
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 30px;
+    max-width: 90%; /* Забезпечуємо адаптивність на маленьких екранах */
+  }
+
+  input, button {
+    font-size: 14px; /* Зменшуємо шрифт для мобільних пристроїв */
+  }
 }
